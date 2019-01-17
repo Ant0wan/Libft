@@ -39,13 +39,6 @@ _Functions that are directly included in libc_
 | [**ft\_isprint()**](https://github.com/elidlocke/libft/blob/master/src/ft_isprint.c) | The ft\_isprint() function tests for any printing character, including space (' ').  The value of the argument must be representable as an unsigned char or the value of EOF.|
 | [**ft\_toupper()**](https://github.com/elidlocke/libft/blob/master/src/ft_toupper.c) | The ft\_toupper() function converts a lower-case letter to the corresponding upper-case letter.  The argument must be representable as an unsigned char or the value of EOF. If the argument is a lower-case letter, the ft\_toupper() function returns the corresponding upper-case letter if there is one; otherwise, the argument is returned unchanged.|
 | [**ft\_tolower()**](https://github.com/elidlocke/libft/blob/master/src/ft_tolower.c) | The ft\_tolower() function converts an upper-case letter to the correspond-ing lower-case letter.  The argument must be representable as an unsigned char or the value of EOF.|
-
-### Part 2
-
-_Additional functions that are not in libc, but are required by the assignment._
-
-| Function | Description |
-| --- | --- |
 | [**ft\_memalloc()**](https://github.com/elidlocke/libft/blob/master/src/ft_memalloc.c) | Allocates with malloc(3) and returns a fresh memory area. The memory allocated is initialized to 0. If the allocation fails, the function returns NULL.|
 | [**ft\_memdel()**](https://github.com/elidlocke/libft/blob/master/src/ft_memdel.c) | The ft\_memdel() function takes the address of a memory area that needs to be freed with free(3), then puts the pointer to NULL.|
 | [**ft\_strnew()**](https://github.com/elidlocke/libft/blob/master/src/ft_strnew.c) | The function ft\_strnew() allocates with malloc(3) and returns a fresh string ending with '\0'. Each character of the string is initialized at '\0'. If the allocation fails, the function returns NULL.|
@@ -69,29 +62,13 @@ _Additional functions that are not in libc, but are required by the assignment._
 | [**ft\_putstr\_fd()**](https://github.com/elidlocke/libft/blob/master/src/ft_putstr_fd.c) | The ft\_putstr\_fd() function outputs a string to the output specified by the file descriptor. A file descriptor of 0, 1, or 2, refers to the standard input, standard output, or standard error, respectively.|
 | [**ft\_putendl\_fd()**](https://github.com/elidlocke/libft/blob/master/src/ft_putendl_fd.c) | The ft\_putendl\_fd() function outputs a string to the output specified by the file descriptor, followed by a newline. The file descriptor  can be  0, 1, or 2, to refer to standard input, standard output, or standard error, respectively.|
 | [**ft\_putnbr\_fd()**](https://github.com/elidlocke/libft/blob/master/src/ft_putnbr_fd.c) | The ft\_putnbr\_fd() function outputs a number to the output specified by the file descriptor. A file descriptor of 0, 1, or 2, refers to the standard input, standard output, or standard error, respectively.|
-
-
-### Part 3
-
-_Optional: creation and manipulation of linked lists_
-
-| Function | Description |
-| --- | --- |
-| [**ft\_lstnew()**](https://github.com/elidlocke/libft/blob/master/src/ft_lstnew.c) | The function ft\_lstnew() allocates (with malloc(3)) and returns a “fresh” link. The variables content and content\_size of the new link are initialized by copy of the parameters of the function. If the parameter content is nul, the variable content is initialized to NULL and the variable content\_size is initialized to 0 even if the parameter content\_size isn’t. The variable next is initialized to NULL. If the allocation fails, the function returns NULL.|
-| [**ft\_lstdelone()**](https://github.com/elidlocke/libft/blob/master/src/ft_lstdelone.c) | The function ft\_lstdelone() takes as a parameter a link's pointer address and frees the memory of the link's content using the function del given as a parameter, then frees the link's memory using free(3). The memory of next must not be freed under any circumstance. Finally, the pointer to the link that was just freed must be set to NULL (quite similar to the function ft\_memdel)|
-| [**ft\_lstdel()**](https://github.com/elidlocke/libft/blob/master/src/ft_lstdel.c) | The function ft\_lstdel() takes as a parameter the address of a pointer to a link and frees the memory of that link, and every successor of that link using the functions del and free. The last pointer is set to NULL.|
-| [**ft\_lstadd()**](https://github.com/elidlocke/libft/blob/master/src/ft_lstadd.c) | The ft\_lstadd() function adds the element new at the beginning of the list alst.|
-| [**ft\_lstiter()**](https://github.com/elidlocke/libft/blob/master/src/ft_lstiter.c) | The ft\_lstiter() function iterates through a list and applies the function f to each link in the list.|
-| [**ft\_lstmap()**](https://github.com/elidlocke/libft/blob/master/src/ft_lstmap.c) | The ft\_map() function iterates a list lst and applies the function f to each link to create a “fresh” list (using malloc(3)) resulting from the successive applications of f. If the allocation fails, the function returns NULL.|
-
-#### Part 4
-_Bonus: functions that I find useful that were not included in the assignment._
-
-| Function | Description |
-| --- | --- |
-| [**ft\_strrev()**](https://github.com/elidlocke/libft/blob/master/src/ft_strrev.c) | The function ft\_strrev() takes a string and the length of that string, and  reverses the string in place. Returns the reversed string.|
-| [**ft\_putstrarr()**](https://github.com/elidlocke/libft/blob/master/src/ft_putstrarr.c) | The function ft\_putstrarr() takes in an array of strings and prints each string, followed by a newline.|
-| [**ft\_putstrarr\_fd()**](https://github.com/elidlocke/libft/blob/master/src/ft_putstrarr_fd.c) | The function ft\_putstrarr\_fd() takes in an array of strings and prints each string to the specified file descriptor, followed by a newline.|
+| **ft\_lstnew()** | The function ft\_lstnew() allocates (with malloc(3)) and returns a “fresh” link. The variables content and content\_size of the new link are initialized by copy of the parameters of the function. If the parameter content is nul, the variable content is initialized to NULL and the variable content\_size is initialized to 0 even if the parameter content\_size isn’t. The variable next is initialized to NULL. If the allocation fails, the function returns NULL.|
+| **ft\_lstdelone()** | The function ft\_lstdelone() takes as a parameter a link's pointer address and frees the memory of the link's content using the function del given as a parameter, then frees the link's memory using free(3). The memory of next must not be freed under any circumstance. Finally, the pointer to the link that was just freed must be set to NULL (quite similar to the function ft\_memdel)|
+| **ft\_lstdel()** | The function ft\_lstdel() takes as a parameter the address of a pointer to a link and frees the memory of that link, and every successor of that link using the functions del and free. The last pointer is set to NULL.|
+| **ft\_lstadd()** | The ft\_lstadd() function adds the element new at the beginning of the list alst.|
+| **ft\_lstiter()** | The ft\_lstiter() function iterates through a list and applies the function f to each link in the list.|
+| **ft\_lstmap()** | The ft\_map() function iterates a list lst and applies the function f to each link to create a “fresh” list (using malloc(3)) resulting from the successive applications of f. If the allocation fails, the function returns NULL.|
+| **ft\_strrev()** | The function ft\_strrev() takes a string and the length of that string, and  reverses the string in place. Returns the reversed string.|
 | [**ft\_iswhitespace()**](https://github.com/elidlocke/libft/blob/master/src/ft_iswhitespace.c) | The function ft\_iswhitespace() checks whether or not a character is considered a whitespace character, aka ' ', '\t', '\n', '\f', '\v' or '\r'|
 | [**ft\_makeabs()**](https://github.com/elidlocke/libft/blob/master/src/ft_makeabs.c) | The ft\_makeabs() function takes an integer and changes it to it's absolute value, while changing the sign variable that gets passed in (1 for positive or -1 for negative).|
 | [**ft\_countwords()**](https://github.com/elidlocke/libft/blob/master/src/ft_countwords.c) | The function ft\_countwords() takes a string and a delimiter and counts the number of words between the delimiters.|
@@ -105,26 +82,9 @@ _Bonus: functions that I find useful that were not included in the assignment._
 | [**ft\_sort\_selection()**](https://github.com/elidlocke/libft/blob/master/src/ft_sort_selection.c) | ft\_sort\_selection() takes an array of ints, and iterates through the array, finding the next biggest number and adding it to the sorted part of the list. Runtime is O(n^2).|
 | [**ft\_sort\_merge()**](https://github.com/elidlocke/libft/blob/master/src/ft_sort_merge.c) | ft\_sort\_merge() takes a list of integers and the length of the array and then sorts the numbers recursively by diving and conquering.  Runtime is nlog(n) time. |
 
-l
-
-
-
-
-
-
-
-
-
-
 ---
 
-## Using this Library
-
-- Copy of the repository:
-
-```shell=
-git clone https://github.com/Ant0wan/Libft.git && cd libft
-```
+## Makefile
 
 The library contains a makefile, with the following options:
 
@@ -135,6 +95,16 @@ The library contains a makefile, with the following options:
 | `make clean` | removes the .o files used to create the library |
 | `make fclean` | removes the .o files used to create the library, as well as the libft.a library file |
 | `make re` | removes all compilation files and remakes them |
+
+---
+
+## Using this Library
+
+- Copy of the repository:
+
+```shell=
+git clone https://github.com/Ant0wan/Libft.git && cd libft
+```
 
 - Compiling Libft:
 
@@ -155,6 +125,3 @@ gcc some_c_file.c -L<path_to_library_file> -lft
 ```
 
 Note that -L takes the path to your library and -l takes the set of characters that come after lib in your library name.
-
----
-
