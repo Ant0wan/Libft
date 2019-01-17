@@ -69,6 +69,12 @@ _Functions that are directly included in libc_
 | **ft\_lstiter()** | The ft\_lstiter() function iterates through a list and applies the function f to each link in the list.|
 | **ft\_lstmap()** | The ft\_map() function iterates a list lst and applies the function f to each link to create a “fresh” list (using malloc(3)) resulting from the successive applications of f. If the allocation fails, the function returns NULL.|
 | **ft\_print_tables()** | The function ft\_print_tables() takes a table and prints the content from each index in the table, assuming that the content is a string or a character. Each parameter is followed by a newline.|
+| **ft\_str_is_alpha()** | The function ft\_str_is_alpha() returns 1 if the string given as a parameter contains only alphabetical characters, and 0 if it contains any other character. It returns 1 if str is empty.|
+| **ft\_str_is_lowercase()** | The function ft\_str_is_lowercase() returns 1 if the string given as a parameter contains only lowercase characters, and 0 if it contains any other character. It returns 1 if str is empty.|
+| **ft\_str_is_numeric()** | The function ft\_str_is_numeric() returns 1 if the string given as a parameter contains only numerical characters, and 0 if it contains any other character. It returns 1 if str is empty.|
+| **ft\_str_is_printable()** | The function ft\_str_is_printable() returns 1 if the string given as a parameter contains only printables characters, and 0 if it contains any other character. It returns 1 if str is empty.|
+| **ft\_str_is_uppercase()** | The function ft\_str_is_uppercase() returns 1 if the string given as a parameter contains only uppercase characters, and 0 if it contains any other character. It returns 1 if str is empty.|
+| **ft\_isprime()** | The function ft_isprime() returns 1 if the number given as a parameter is a prime number, and 0 if it isn’t.|
 
 ---
 
